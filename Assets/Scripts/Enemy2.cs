@@ -44,7 +44,7 @@ public class Enemy2 : MonoBehaviour
         //movement = direction;
         transform.LookAt(Player);
 
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        if (Vector3.Distance(transform.position, Player.position) >= 0)
         {
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
@@ -100,9 +100,9 @@ public class Enemy2 : MonoBehaviour
         Debug.Log(collision.collider.name);
         Player _player = collision.collider.GetComponent<Player>();
 
-
         if (_player != null)
         {
+            Debug.Log("Tu si picko jedna");
             _player.DamagePlayer(stats.damage);
             DamageEnemy(1000);
 
@@ -117,5 +117,6 @@ public class Enemy2 : MonoBehaviour
         //}
 
     }
+
 
 }

@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         }
     }
     public PlayerStats stats = new PlayerStats();
+    
 
     //[SerializeField]
     //private Status statusIndicator;
@@ -44,11 +45,13 @@ public class Player : MonoBehaviour
 
     public void DamagePlayer(int damage)
     {
+        Debug.Log("Hitas ga");
         stats.curHealth -= damage;
         if (stats.curHealth <= 0)
         {
             GameMaster.KillPlayer(this);
         }
+        Debug.Log(stats.curHealth);
         //statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
     }
     //void oncollisionenter2d(collision2d collision)
@@ -77,4 +80,5 @@ public class Player : MonoBehaviour
 
 
     //}
+
 }

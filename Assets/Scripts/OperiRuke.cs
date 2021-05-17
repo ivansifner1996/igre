@@ -6,7 +6,7 @@ public class OperiRuke : MonoBehaviour
 {
     public GameObject OperiPanel = null;
     private bool operiRuke;
-    public GameObject oružje = null;
+    public GameObject oruzje = null;
     void Start()
     {
         operiRuke = false;
@@ -39,7 +39,7 @@ public class OperiRuke : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 OperiPanel.SetActive(false);
-                oružje.SetActive(true);
+                oruzje.SetActive(true);
             }
         }
     }

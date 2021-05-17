@@ -13,7 +13,6 @@ public class GameMaster : MonoBehaviour
     public Text countText;
     public GameObject canvas;
 
-
     void Start()
     {
         //StartCoroutine(CountDownStart());
@@ -21,7 +20,6 @@ public class GameMaster : MonoBehaviour
         {
 
             gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-
         }
     }
     void Update()
